@@ -1,0 +1,78 @@
+
+body {
+    font-family: 'Gothic A1', sans-serif;
+    background: dodgerblue;
+    text-align: center;
+    margin: 0;
+    font-size: 18px;
+}
+
+
+.analogsea-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35px;
+    padding: 20px;
+}
+
+.signup-form{
+    padding-top:40px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    background: white;
+    width: 400px;
+}
+legend {
+    color: dimgrey;
+    font-size: 32px;
+    padding-bottom: 20px;
+}
+fieldset {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+fieldset label {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    display: block;
+    text-align: left;
+    padding-left: 40px;
+}
+
+input[type=email], input[type=password], select {
+    width: 320px;
+    padding: 15px;
+    margin: 15px;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+button{
+    font-size: 18px;
+    font-weight: bold;
+    width: 320px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 55px;
+    margin-bottom: 100px;
+}
+button:hover {
+    background-color: #45a049;
+}
+.re-login {
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
