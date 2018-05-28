@@ -55,10 +55,11 @@ function displayUserQuestion() {
 
 
 function generateQuizItem() {
-    console.log(`generateQuizItem: questionNumber = ${questionNumber}`);
+    console.log( `generateQuizItem: questionNumber = ${questionNumber}` );
 
     if (questionNumber < QUIZ_DB.length) {
-        return`
+        let tabIdx = 10;
+        return `
     <div class="row quiz-question">
         <h2>${QUIZ_DB[questionNumber].question}</h2>
     </div>
@@ -70,22 +71,11 @@ function generateQuizItem() {
     <div class="col-6 quiz-form">
     <form>
         <fieldset role="radiogroup" aria-required="true">
-            <label class="answerOption">
-                <input tabindex="11" type="radio" value="${QUIZ_DB[questionNumber].answers[0]}" name="answer" required="required">
-                <span>${QUIZ_DB[questionNumber].answers[0]}<br></span>
-            </label>
-            <label class="answerOption">
-                <input tabindex="12" type="radio" value="${QUIZ_DB[questionNumber].answers[1]}" name="answer" required="required">
-                <span>${QUIZ_DB[questionNumber].answers[1]}<br></span>
-            </label>
-            <label class="answerOption">
-                <input tabindex="13" type="radio" value="${QUIZ_DB[questionNumber].answers[2]}" name="answer" required="required">
-                <span>${QUIZ_DB[questionNumber].answers[2]}<br></span>
-            </label>
-            <label class="answerOption">
-                <input tabindex="14" type="radio" value="${QUIZ_DB[questionNumber].answers[3]}" name="answer" required="required">
-                <span>${QUIZ_DB[questionNumber].answers[3]}<br></span>
-            </label>
+            ${QUIZ_DB[questionNumber].answers.map( answer =>
+        '<label class="answerOption">' +
+        '<input tabindex="' + tabIdx++ + '" type="radio" value="' + answer + '" name="answer" required="required">' +
+        '<span>' + answer + '<br></span>' +
+        '</label>' )}
             <button type="submit" class="submit-button">Submit</button>
         </fieldset>
         </form>
@@ -128,29 +118,31 @@ function handleUserSelection() {
 
 
 function provideUserFeedback(answer) {
+    let imgSrc = "unavailable";
+    let imgAlt = "unavailable";
+    let pText  ="unavailable";
     if (answer) {
-        $('.quiz-main').html(`
-        <div class="row feedback">
-            <img src="images/correct.png" alt="correct answer!"/>
-            <p><b>You got it right!</b></p>
-            <span>${QUIZ_DB[questionNumber].feedback}<br></span>
-        </div>
-        <div class="row feedback">
-            <button tabindex="0" type=button class="nextButton">Next</button>
-        </div>`);
+        imgSrc = "images/correct.png";
+        imgAlt = "correct answer!";
+        pText  ="You got it right";
     }
     else {
-        $('.quiz-main').html(`
+        imgSrc = "images/wrong.png";
+        imgAlt = "wrong answer!";
+        pText  ="You got it wrong!";
+    }
+
+    $('.quiz-main').html(`
         <div class="row feedback">
-            <img src="images/wrong.png" alt="wrong answer!"/>
-            <p><b>You got it wrong!</b></p>
+            <img src=${imgSrc} alt=${imgAlt}/>
+            <p><b>${pText}</b></p>
             <span>${QUIZ_DB[questionNumber].feedback}<br></span>
         </div>
         <div class="row feedback">
             <button tabindex="0" type=button class="nextButton">Next</button>
         </div>`);
-    }
 }
+
 
 function handleNextButton() {
     console.log("invoked: handleNextButton()");
@@ -192,7 +184,9 @@ function generateEndUserFeedback() {
 function retryQuizApp() {
     console.log("invoked: retryQuizApp()");
     $('main').on('click', '.restartButton', function (event) {
-        location.reload();
+        //location.reload();
+        resetScoreBoard();
+        playQuizApp();
     });
 }
 

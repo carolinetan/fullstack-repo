@@ -138,6 +138,10 @@ form button {
     margin: 10px auto 10px auto;
 }
 
+.play-button-div {
+    text-align: center;
+}
+
 .play-button:hover, .nextButton:hover, .restartButton:hover, .play-button:focus, .nextButton:focus, .restartButton:focus {
     background-color: #F9E79F;
     color: dimgray;
