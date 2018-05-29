@@ -80,9 +80,10 @@ label {
     transition: all 0.3s ease-out;
     line-height: 22px
 }
-label:hover, label:focus {
-    background-color: #AF6438
+label:hover, label:focus, label.tab_focus_bg {
+    background-color: #AF6438;
 }
+
 fieldset {
     border: none;
 }
@@ -102,9 +103,10 @@ input {
     top: 2px;
 }
 
-input:checked, input:focus {
+input:checked  {
     border: 8px solid #F9E79F;
 }
+
 input[type=radio] {
     flex: 0 0 auto;
     margin-right: 10px;

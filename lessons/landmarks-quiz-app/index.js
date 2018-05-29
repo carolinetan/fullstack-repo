@@ -76,7 +76,7 @@ function generateQuizItem() {
             `<label class="answerOption">
                     <input tabindex="11" type="radio" value="${answer}" name="answer" required="required">
         <span>${answer}<br></span>
-        </label>` ).join('\n')}
+        </label>` ).join('')}
             <button type="submit" class="submit-button">Submit</button>
         </fieldset>
         </form>
@@ -191,12 +191,22 @@ function retryQuizApp() {
     });
 }
 
+function addTabHandler() {
+    $('.quiz-main').on('focus', '.answerOption input', function(){
+        $(this).parent().addClass('tab_focus_bg');
+    });
+
+    $('.quiz-main').on('blur', '.answerOption input', function(){
+        $(this).parent().removeClass('tab_focus_bg');
+    });
+}
 
 
 function playQuizApp() {
     console.log("invoked: playQuizApp()");
     initializeQuiz();
     displayUserQuestion();
+    addTabHandler();
     handleUserSelection();
     handleNextButton();
 }
