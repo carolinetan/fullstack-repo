@@ -93,9 +93,9 @@ function handleUserSelection() {
         console.log(`handleUserSelection: questionNumber = ${questionNumber}`);
 
         event.preventDefault();
-        let selected = $( 'input:checked' );
-        let answer = selected.val();
-        let correctAnswer = `${QUIZ_DB[questionNumber].correctAnswer}`;
+        const selected = $( 'input:checked' );
+        const answer = selected.val();
+        const correctAnswer = `${QUIZ_DB[questionNumber].correctAnswer}`;
         console.log(`handleUserSelection: user-answer=${answer}, correct-answer=${correctAnswer}`);
 
         if (answer === correctAnswer) {
