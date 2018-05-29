@@ -8,7 +8,8 @@ const QUIZ_DB = [
             'Paris',
             'Madrid',
             'Athens',
-            'Rome'
+            'Rome',
+            'Germany'
         ],
         correctAnswer: 'Rome',
         feedback: 'The Fontana di Trevi is in Rome which is the capital of Italy. It is considered good luck to throw coins into the fountain. Around 3,000 Euros worth of coins are thrown into the water each day.',
@@ -21,6 +22,7 @@ const QUIZ_DB = [
             'Hamburg',
             'Thessalonki',
             'Warsaw',
+            'Budapest',
             'Moscow'
         ],
         correctAnswer: 'Moscow',
@@ -34,6 +36,7 @@ const QUIZ_DB = [
             'Seoul',
             'Kuala Lumpur',
             'Hong Kong',
+            'Thailand',
             'Bangkok'
         ],
         correctAnswer: 'Kuala Lumpur',
@@ -47,6 +50,7 @@ const QUIZ_DB = [
             'New Delhi',
             'Agra',
             'Bengaluru',
+            'Kolkata',
             'Mumbai'
         ],
         correctAnswer: 'Agra',
@@ -59,7 +63,8 @@ const QUIZ_DB = [
         answers: [
             'Brunei',
             'Cambodia',
-            'Saudi Arabia',
+            'Cambodia',
+            'Iraq',
             'Turkey'
         ],
         correctAnswer: 'Brunei',
@@ -73,6 +78,7 @@ const QUIZ_DB = [
             'Barbara',
             'Helena',
             'Petra',
+            'Amman',
             'Linda'
         ],
         correctAnswer: 'Petra',
@@ -86,6 +92,7 @@ const QUIZ_DB = [
             'Thailand',
             'Japan',
             'Hawaii',
+            'Malaysia',
             'Philippines'
         ],
         correctAnswer: 'Japan',
@@ -99,6 +106,7 @@ const QUIZ_DB = [
             'Alaska',
             'Finland',
             'Sweden',
+            'Poland',
             'Canada'
         ],
         correctAnswer: 'Alaska',
@@ -112,6 +120,7 @@ const QUIZ_DB = [
             'Cairo',
             'Awbari',
             'Marrakesh',
+            'El Qasr',
             'Bangui'
         ],
         correctAnswer: 'Cairo',
@@ -125,6 +134,7 @@ const QUIZ_DB = [
             'Paris',
             'Vienna',
             'Moscow',
+            'Milan',
             'Sydney'
         ],
         correctAnswer: 'Sydney',

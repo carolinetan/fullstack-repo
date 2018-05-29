@@ -68,14 +68,15 @@ function generateQuizItem() {
         <img class="quiz-image"
             src="${QUIZ_DB[questionNumber].image}" alt="${QUIZ_DB[questionNumber].imageLabel}"/>
     </div>
+    <div class="row">
     <div class="col-6 quiz-form">
-    <form>
-        <fieldset role="radiogroup" aria-required="true">
-            ${QUIZ_DB[questionNumber].answers.map( answer =>
-        '<label class="answerOption">' +
-        '<input tabindex="' + tabIdx++ + '" type="radio" value="' + answer + '" name="answer" required="required">' +
-        '<span>' + answer + '<br></span>' +
-        '</label>' )}
+            <form>
+            <fieldset role="radiogroup" aria-required="true">
+                ${QUIZ_DB[questionNumber].answers.map( answer =>
+            `<label class="answerOption">
+                    <input tabindex="11" type="radio" value="${answer}" name="answer" required="required">
+        <span>${answer}<br></span>
+        </label>` ).join('\n')}
             <button type="submit" class="submit-button">Submit</button>
         </fieldset>
         </form>
