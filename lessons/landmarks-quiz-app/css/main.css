@@ -12,8 +12,6 @@ h1 {
     color: darkred;
     text-shadow: 2px 2px darkgray;
     font-size: 2em;
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
 body {
@@ -198,10 +196,11 @@ form button {
 .feedback span {
     color: saddlebrown;
     font-size: 1.0em;
-    text-align: center;
+    text-align: justify;
     width: 100%;
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 10px;
     display: block;
 }
 .feedback img, .results img{
