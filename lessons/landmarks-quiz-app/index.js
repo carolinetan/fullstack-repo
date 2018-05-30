@@ -71,6 +71,7 @@ function generateQuizItem() {
     <div class="row">
     <div class="col-6 quiz-form">
             <form>
+            <legend>Landmark Locations</legend>
             <fieldset role="radiogroup" aria-required="true">
                 ${QUIZ_DB[questionNumber].answers.map( answer =>
             `<label class="answerOption">
@@ -137,7 +138,7 @@ function provideUserFeedback(answer) {
         <div class="row feedback">
             <img src=${imgSrc} alt=${imgAlt}/>
             <p><b>${pText}</b></p>
-            <span>${QUIZ_DB[questionNumber].feedback}<br></span>
+            <span>${QUIZ_DB[questionNumber].feedback}</span>
         </div>
         <div class="row feedback">
             <button tabindex="0" type=button class="nextButton">Next</button>

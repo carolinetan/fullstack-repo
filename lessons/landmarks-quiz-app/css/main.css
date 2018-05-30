@@ -11,7 +11,9 @@ h1 {
     text-align: center;
     color: darkred;
     text-shadow: 2px 2px darkgray;
-    font-size: 3em;
+    font-size: 2em;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 body {
@@ -21,6 +23,8 @@ body {
 header p {
     margin-top: 0.5em;
 }
+
+legend { display: none; }
 
 .scoreboard {
     margin-top: 20px;
@@ -33,6 +37,8 @@ header p {
 .quiz-question {
     color: darkred;
     font-size: 1.0em;
+    padding-left: 10px;
+    padding-right: 10px;
     text-align: center;
 }
 
@@ -191,13 +197,12 @@ form button {
 
 .feedback span {
     color: saddlebrown;
-    font-size: 1.2em;
+    font-size: 1.0em;
     text-align: center;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    -webkit-box-decoration-break: clone;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: block;
 }
 .feedback img, .results img{
     padding-top: 40px;
@@ -222,8 +227,9 @@ form button {
     color: saddlebrown;
     font-size: 1.3em;
     text-align: center;
-    width: 40%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 10px;
     display: block;
 }
