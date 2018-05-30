@@ -72,7 +72,7 @@ function generateQuizItem() {
     <div class="col-6 quiz-form">
             <form>
             <legend>Landmark Locations</legend>
-            <fieldset role="radiogroup" aria-required="true">
+            <fieldset>
                 ${QUIZ_DB[questionNumber].answers.map( answer =>
             `<label class="answerOption">
                     <input tabindex="11" type="radio" value="${answer}" name="answer" required="required">
