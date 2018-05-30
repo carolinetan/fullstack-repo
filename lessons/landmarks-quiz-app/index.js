@@ -71,13 +71,15 @@ function generateQuizItem() {
     <div class="row">
     <div class="col-6 quiz-form">
             <form>
-            <legend>Landmark Locations</legend>
             <fieldset>
+            <legend>Landmark Locations</legend>
+            <p>
                 ${QUIZ_DB[questionNumber].answers.map( answer =>
-            `<label class="answerOption">
+                    `<label class="answerOption">
                     <input tabindex="11" type="radio" value="${answer}" name="answer" required="required">
         <span>${answer}<br></span>
         </label>` ).join('')}
+            </p>
             <button type="submit" class="submit-button">Submit</button>
         </fieldset>
         </form>
